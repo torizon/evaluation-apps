@@ -1,0 +1,18 @@
+name: README size limit check
+on: pull_request
+jobs:
+    Check-Readme-Size:
+        runs-on: ubuntu-22.04
+        steps:
+            - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+
+            - name: Check out repository code
+              uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v3
+              with:
+                python-version: '3.x'
+
+            - name: Check README Size
+              run: python .github/scripts/check_readme_size.py
