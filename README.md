@@ -1,2 +1,3 @@
-# evaluation-apps
-Evaluation apps for Torizon onboarding
+# Evaluation Apps #
+
+Evaluation apps for Torizon onboarding.
