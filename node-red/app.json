@@ -2,7 +2,7 @@
     "packages":
     [
         {
-            "filename": "docker-compose-apalis-imx6.yml",
+            "filename": "docker-compose.yml",
             "name": "Node-RED",
             "icon": "icon.png",
             "version": "3.1.3",
