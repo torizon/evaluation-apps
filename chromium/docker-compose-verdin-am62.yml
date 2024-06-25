@@ -39,7 +39,7 @@ services:
         target: /dev
       - type: bind
         source: /run/udev
-        target: /run/udev.
+        target: /run/udev
     cap_add:
       - CAP_SYS_TTY_CONFIG
     # Add device access rights through cgroup...

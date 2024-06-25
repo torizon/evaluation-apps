@@ -1,6 +1,12 @@
 {
-    "name": "Node-RED",
-    "icon": "icon.png",
-    "version": "3.1.3",
-    "description": "README.md"
+    "packages":
+    [
+        {
+            "filename": "docker-compose-apalis-imx6.yml",
+            "name": "Node-RED",
+            "icon": "icon.png",
+            "version": "3.1.3",
+            "description": "README.md"
+        }
+    ]
 }
