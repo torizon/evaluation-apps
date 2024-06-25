@@ -1,0 +1,68 @@
+{
+    "packages":
+    [
+        {
+            "name": "qt-apalis-imx6",
+            "filename": "docker-compose-apalis-imx6.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "qt-apalis-imx8",
+            "filename": "docker-compose-apalis-imx8.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "qt-colibri-imx6",
+            "filename": "docker-compose-colibri-imx6.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "qt-colibri-imx6ull",
+            "filename": "docker-compose-colibri-imx6ull.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "qt-colibri-imx7",
+            "filename": "docker-compose-colibri-imx7.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "qt-colibri-imx8x",
+            "filename": "docker-compose-colibri-imx8x.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "qt-verdin-am62",
+            "filename": "docker-compose-verdin-am62.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "qt-verdin-imx8mm",
+            "filename": "docker-compose-verdin-imx8mm.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "qt-verdin-imx8mp",
+            "filename": "docker-compose-verdin-imx8mp.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        }
+    ]
+}
