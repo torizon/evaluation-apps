@@ -1,6 +1,68 @@
 {
-    "name": "Weston",
-    "icon": "icon.png",
-    "version": "2.7.2",
-    "description": "README.md"
+    "packages":
+    [
+        {
+            "name": "weston-apalis-imx6",
+            "filename": "docker-compose-apalis-imx6.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "weston-apalis-imx8",
+            "filename": "docker-compose-apalis-imx8.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "weston-colibri-imx6",
+            "filename": "docker-compose-colibri-imx6.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "weston-colibri-imx6ull",
+            "filename": "docker-compose-colibri-imx6ull.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "weston-colibri-imx7",
+            "filename": "docker-compose-colibri-imx7.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "weston-colibri-imx8x",
+            "filename": "docker-compose-colibri-imx8x.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "weston-verdin-am62",
+            "filename": "docker-compose-verdin-am62.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "weston-verdin-imx8mm",
+            "filename": "docker-compose-verdin-imx8mm.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        },
+        {
+            "name": "weston-verdin-imx8mp",
+            "filename": "docker-compose-verdin-imx8mp.yml",
+            "version": "3",
+            "icon": "icon.png",
+            "description": "README.md"
+        }
+    ]
 }
