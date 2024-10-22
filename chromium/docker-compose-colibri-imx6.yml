@@ -1,7 +1,7 @@
 version: "3"
 services:
   chromium:
-    image: torizon/chromium:3
+    image: torizon/chromium:3.4
     security_opt:
       - seccomp:unconfined
     shm_size: 256mb
