@@ -1,0 +1,75 @@
+version: '3.8'
+
+services:
+  weston:
+    image: torizon/weston-am62:3
+    environment:
+      - ACCEPT_FSL_EULA=1
+    network_mode: host
+    cap_add:
+      - CAP_SYS_TTY_CONFIG
+    volumes:
+      - /dev:/dev
+      - /tmp:/tmp
+      - /run/udev/:/run/udev/
+    device_cgroup_rules:
+      - 'c 4:* rmw'
+      - 'c 13:* rmw'
+      - 'c 199:* rmw'
+      - 'c 226:* rmw'
+    command: --developer
+    restart: unless-stopped
+
+  chromium:
+    image: torizon/chromium-am62:3
+    network_mode: host
+    depends_on: ["codesys-setup"]
+    volumes:
+      - /tmp:/tmp
+      - /var/run/dbus:/var/run/dbus
+      - /dev/galcore:/dev/galcore
+    device_cgroup_rules:
+      - 'c 199:* rmw'
+    security_opt:
+      - seccomp=unconfined
+    shm_size: '256mb'
+    command: --virtual-keyboard http://localhost:80
+    restart: unless-stopped
+
+  codesys-setup:
+    image: toradexdemos/codesys_demo_arm64:4.13.0.0
+    network_mode: host
+    pid: host
+    privileged: true
+    volumes:
+      - /tmp/dockerMount:/dockerMount_copy
+    restart: unless-stopped
+
+  codesys:
+    image: toradexdemos/codesyscontrol_virtuallinuxarm64:4.13.0.0
+    volumes:
+      - /tmp/dockerMount/conf/codesyscontrol/:/conf/codesyscontrol/:ro
+      - /tmp/dockerMount/data/codesyscontrol/:/data/codesyscontrol/:ro
+      - /tmp/dockerMount/extension/codesyscontrol/:/var/opt/codesysextension/:ro
+      - /var/run/codesysextension/:/var/run/codesysextension/
+    depends_on: ["codesys-setup"]
+    network_mode: host
+    cap_add:
+      - CHOWN
+      - IPC_LOCK
+      - KILL
+      - NET_ADMIN
+      - NET_BIND_SERVICE
+      - NET_BROADCAST
+      - NET_RAW
+      - SETFCAP
+      - SETPCAP
+      - SYS_ADMIN
+      - SYS_MODULE
+      - SYS_NICE
+      - SYS_PTRACE
+      - SYS_RAWIO
+      - SYS_RESOURCE
+      - SYS_TIME
+    restart: unless-stopped
+    command: cat /conf/codesyscontrol/started
