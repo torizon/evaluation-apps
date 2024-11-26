@@ -1,57 +1,48 @@
-version: "3"
 services:
   chromium:
-    image: torizon/chromium:3.4
+    command:
+    - --virtual-keyboard
+    - https://www.toradex.com
+    depends_on:
+    - weston
+    device_cgroup_rules:
+    - c 226:* rmw
+    image: torizon/chromium@sha256:dfd33174d41d0b0b40fc456e076b7c4501ec480a5aad37e8cc2dc985db0673df
     security_opt:
-      - seccomp:unconfined
+    - seccomp:unconfined
     shm_size: 256mb
     volumes:
-      - type: bind
-        source: /tmp
-        target: /tmp
-      - type: bind
-        source: /var/run/dbus
-        target: /var/run/dbus
-      - type: bind
-        source: /dev/
-        target: /dev/
-    # Add device access rights through cgroup...
-    device_cgroup_rules:
-      # ... for /dev/dri devices
-      - 'c 226:* rmw'
-    command:
-      - --virtual-keyboard
-      - https://www.toradex.com
-    depends_on: [
-      weston
-    ]
-
+    - source: /tmp
+      target: /tmp
+      type: bind
+    - source: /var/run/dbus
+      target: /var/run/dbus
+      type: bind
+    - source: /dev/
+      target: /dev/
+      type: bind
   weston:
-    image: torizon/weston:3
-    # Required to get udev events from host udevd via netlink
-    network_mode: host
-    ipc: host
-    volumes:
-      - type: bind
-        source: /tmp
-        target: /tmp
-      - type: bind
-        source: /dev
-        target: /dev
-      - type: bind
-        source: /run/udev
-        target: /run/udev
     cap_add:
-      - CAP_SYS_TTY_CONFIG
-    # Add device access rights through cgroup...
-    device_cgroup_rules:
-      # ... for tty0
-      - 'c 4:* rmw'
-      # ... for /dev/input devices
-      - 'c 13:* rmw'
-      # ... for /dev/dri devices
-      - 'c 226:* rmw'
+    - CAP_SYS_TTY_CONFIG
     command:
-      - --tty=/dev/tty7
-      - --
-      - --use-pixman
+    - --tty=/dev/tty7
+    - --
+    - --use-pixman
+    device_cgroup_rules:
+    - c 4:* rmw
+    - c 13:* rmw
+    - c 226:* rmw
+    image: torizon/weston@sha256:857f83d0f5b63fe2e7d6e0f07f6264f936c58588b1ab77391b0ed5c5965b2da5
+    ipc: host
+    network_mode: host
+    volumes:
+    - source: /tmp
+      target: /tmp
+      type: bind
+    - source: /dev
+      target: /dev
+      type: bind
+    - source: /run/udev
+      target: /run/udev
+      type: bind
+version: '3'
