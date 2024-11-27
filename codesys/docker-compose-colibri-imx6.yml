@@ -7,6 +7,7 @@ services:
     - c 226:* rmw
     image: torizon/chromium@sha256:dfd33174d41d0b0b40fc456e076b7c4501ec480a5aad37e8cc2dc985db0673df
     network_mode: host
+    platform: linux/arm/v7
     restart: unless-stopped
     security_opt:
     - seccomp=unconfined
@@ -15,7 +16,6 @@ services:
     - /tmp:/tmp
     - /var/run/dbus:/var/run/dbus
     - /dev/dri:/dev/dri
-    platform: "linux/arm/v7"
   codesys:
     cap_add:
     - CHOWN
@@ -39,22 +39,22 @@ services:
     - codesys-setup
     image: toradexdemos/codesyscontrol_virtuallinuxarm@sha256:c8af14b752e4bf04482a1fa526f215d44e677b932394bacd4a98c2cfee68c771
     network_mode: host
+    platform: linux/arm/v7
     restart: unless-stopped
     volumes:
     - /tmp/dockerMount/conf/codesyscontrol/:/conf/codesyscontrol/:ro
     - /tmp/dockerMount/data/codesyscontrol/:/data/codesyscontrol/:ro
     - /tmp/dockerMount/extension/codesyscontrol/:/var/opt/codesysextension/:ro
     - /var/run/codesysextension/:/var/run/codesysextension/
-    platform: "linux/arm/v7"
   codesys-setup:
     image: toradexdemos/codesys_demo_arm32@sha256:10bb98626ed341ebcab3cf528419722943ad73ae3acc41921650de2c302a81de
     network_mode: host
     pid: host
+    platform: linux/arm/v7
     privileged: true
     restart: unless-stopped
     volumes:
     - /tmp/dockerMount:/dockerMount_copy
-    platform: "linux/arm/v7"
   weston:
     cap_add:
     - CAP_SYS_TTY_CONFIG
@@ -67,10 +67,10 @@ services:
     - ACCEPT_FSL_EULA=1
     image: torizon/weston@sha256:857f83d0f5b63fe2e7d6e0f07f6264f936c58588b1ab77391b0ed5c5965b2da5
     network_mode: host
+    platform: linux/arm/v7
     restart: unless-stopped
     volumes:
     - /dev:/dev
     - /tmp:/tmp
     - /run/udev/:/run/udev/
-    platform: "linux/arm/v7"
 version: '3.8'

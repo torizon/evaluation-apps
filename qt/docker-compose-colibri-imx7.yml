@@ -9,6 +9,7 @@ services:
     - c 199:* rmw
     - c 226:* rmw
     image: lucastor/cppqml-template@sha256:2552de91c1d2055bc58d3476240a0af5be0fa81719991637ba1bb96152464c67
+    platform: linux/arm/v7
     volumes:
     - source: /tmp
       target: /tmp
@@ -16,7 +17,6 @@ services:
     - source: /dev
       target: /dev
       type: bind
-    platform: "linux/arm/v7"
   weston:
     cap_add:
     - CAP_SYS_TTY_CONFIG
@@ -31,6 +31,7 @@ services:
     image: torizon/weston@sha256:857f83d0f5b63fe2e7d6e0f07f6264f936c58588b1ab77391b0ed5c5965b2da5
     ipc: host
     network_mode: host
+    platform: linux/arm/v7
     volumes:
     - source: /tmp
       target: /tmp
@@ -41,5 +42,4 @@ services:
     - source: /run/udev
       target: /run/udev
       type: bind
-    platform: "linux/arm/v7"
 version: '3.9'
