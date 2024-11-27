@@ -13,6 +13,7 @@ services:
     - ACCEPT_FSL_EULA=1
     image: torizon/weston-vivante@sha256:20b09290a5238b2b61d5f6965e2407347867100f488ce77cfd19f485d82501e6
     network_mode: host
+    platform: linux/arm64
     volumes:
     - source: /tmp
       target: /tmp

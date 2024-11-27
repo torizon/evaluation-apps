@@ -8,6 +8,7 @@ services:
     device_cgroup_rules:
     - c 226:* rmw
     image: torizon/chromium-am62@sha256:bb633a994129357eda8fef826ae614bbeadf99a8f9013ae1f2481c327c247433
+    platform: linux/arm64
     security_opt:
     - seccomp:unconfined
     shm_size: 256mb
@@ -32,6 +33,7 @@ services:
     - c 226:* rmw
     image: torizon/weston-am62@sha256:ded14c38171722dd327ed8cea44310ad793e9e263451729701a99540fae27880
     network_mode: host
+    platform: linux/arm64
     volumes:
     - source: /tmp
       target: /tmp

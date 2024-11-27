@@ -8,6 +8,7 @@ services:
     device_cgroup_rules:
     - c 199:* rmw
     image: torizon/chromium@sha256:dfd33174d41d0b0b40fc456e076b7c4501ec480a5aad37e8cc2dc985db0673df
+    platform: linux/arm64
     security_opt:
     - seccomp:unconfined
     shm_size: 256mb
@@ -35,6 +36,7 @@ services:
     - ACCEPT_FSL_EULA=1
     image: torizon/weston-vivante@sha256:20b09290a5238b2b61d5f6965e2407347867100f488ce77cfd19f485d82501e6
     network_mode: host
+    platform: linux/arm64
     volumes:
     - source: /tmp
       target: /tmp
