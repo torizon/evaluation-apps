@@ -15,6 +15,7 @@ services:
     - /tmp:/tmp
     - /var/run/dbus:/var/run/dbus
     - /dev/galcore:/dev/galcore
+    platform: "linux/arm64"
   codesys:
     cap_add:
     - CHOWN
@@ -44,6 +45,7 @@ services:
     - /tmp/dockerMount/data/codesyscontrol/:/data/codesyscontrol/:ro
     - /tmp/dockerMount/extension/codesyscontrol/:/var/opt/codesysextension/:ro
     - /var/run/codesysextension/:/var/run/codesysextension/
+    platform: "linux/arm64"
   codesys-setup:
     image: toradexdemos/codesys_demo_arm64@sha256:c2eb20e79bec67902411ca35dbc2a81b8c950b894f72dd00f00b6006ca585d7b
     network_mode: host
@@ -52,6 +54,7 @@ services:
     restart: unless-stopped
     volumes:
     - /tmp/dockerMount:/dockerMount_copy
+    platform: "linux/arm64"
   weston:
     cap_add:
     - CAP_SYS_TTY_CONFIG
@@ -70,4 +73,5 @@ services:
     - /dev:/dev
     - /tmp:/tmp
     - /run/udev/:/run/udev/
+    platform: "linux/arm64"
 version: '3.8'

@@ -23,4 +23,5 @@ services:
     - source: /run/udev
       target: /run/udev
       type: bind
+    platform: "linux/arm/v7"
 version: '3'

@@ -16,6 +16,7 @@ services:
     - source: /dev
       target: /dev
       type: bind
+    platform: "linux/arm/v7"
   weston:
     cap_add:
     - CAP_SYS_TTY_CONFIG
@@ -37,4 +38,5 @@ services:
     - source: /run/udev
       target: /run/udev
       type: bind
+    platform: "linux/arm/v7"
 version: '3.9'

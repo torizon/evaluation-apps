@@ -20,4 +20,5 @@ services:
     - source: /run/udev
       target: /run/udev
       type: bind
+    platform: "linux/arm64"
 version: '3'
