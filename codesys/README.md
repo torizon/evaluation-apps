@@ -12,7 +12,7 @@
 
 This demo deploys a **Codesys PCL** with a Simon Game intended for evaluation. 
 
-![Screenshot](./screenshot.png)
+![Screenshot](https://docs1.toradex.com/116543-demogallerycodesys.png?v=1)
 
 ## About
 

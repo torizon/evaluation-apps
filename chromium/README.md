@@ -10,7 +10,7 @@
 
 This application runs the Chromium web browser in **kiosk** mode.
 
-![Screenshot](./screenshot.png)
+![Screenshot](https://docs1.toradex.com/116542-demogallerychromium.png?v=1)
 
 ## About
 

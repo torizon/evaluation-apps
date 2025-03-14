@@ -10,7 +10,7 @@
 
 This app starts a standalone instance of Weston from where you can launch other applications like the weston-terminal Terminal Emulator.
 
-![Screenshot](./screenshot.png)
+![Screenshot](https://docs1.toradex.com/116545-demogalleryweston.png?v=1)
 
 A blank dark-blue screen.
 

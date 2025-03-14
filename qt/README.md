@@ -10,7 +10,7 @@
 
 Deploy a simple Qt QML application (in C++) in a Weston environment. It creates a window and displays the Torizon icon using the Weston container as the Wayland compositor.
 
-![Screenshot](./screenshot.png)
+![Screenshot](https://docs1.toradex.com/116544-demogalleryqt.png?v=1)
 
 ## About
 
@@ -37,3 +37,5 @@ To run this demo, you need:s
 - [Getting Started with Qt](https://developer.toradex.com/linux-bsp/application-development/gui/getting-started-with-qt/)
 - [Qt 6 QML Template](https://github.com/torizon/vscode-torizon-templates/blob/dev/cppQML/.doc/README.md);
 - [Qt PySide2 Tempĺate](https://github.com/torizon/vscode-torizon-templates/tree/bookworm/python3Pyside2QML/.doc).
+
+
