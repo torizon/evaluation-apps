@@ -7,7 +7,7 @@ services:
     - weston
     device_cgroup_rules:
     - c 199:* rmw
-    image: torizon/chromium@sha256:dfd33174d41d0b0b40fc456e076b7c4501ec480a5aad37e8cc2dc985db0673df
+    image: torizon/chromium:$CT_TAG_CHROMIUM
     platform: linux/arm64
     security_opt:
     - seccomp:unconfined
@@ -19,22 +19,22 @@ services:
     - source: /var/run/dbus
       target: /var/run/dbus
       type: bind
-    - source: /dev/
-      target: /dev/
+    - source: /dev/galcore
+      target: /dev/galcore
       type: bind
   weston:
     cap_add:
     - CAP_SYS_TTY_CONFIG
-    command:
-    - --tty=/dev/tty7
     device_cgroup_rules:
     - c 4:* rmw
     - c 13:* rmw
     - c 226:* rmw
-    - c 199:* rmw
+    - c 253:* rmw
+    - c 10:223 rmw
+    - c 199:0 rmw
     environment:
     - ACCEPT_FSL_EULA=1
-    image: torizon/weston-vivante@sha256:20b09290a5238b2b61d5f6965e2407347867100f488ce77cfd19f485d82501e6
+    image: torizon/weston-imx8:$CT_TAG_CHROMIUM
     network_mode: host
     platform: linux/arm64
     volumes:
@@ -47,4 +47,3 @@ services:
     - source: /run/udev
       target: /run/udev
       type: bind
-version: '3'
