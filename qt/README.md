@@ -33,8 +33,8 @@ To run this demo, you need:s
 
 ## More Resources
 
-- [Qt on Torizon OS](https://developer.toradex.com/torizon/application-development/use-cases/gui/qt-on-torizon-os/);
-- [Getting Started with Qt](https://developer.toradex.com/linux-bsp/application-development/gui/getting-started-with-qt/)
+- [Qt on Torizon OS](https://developer.toradex.com/torizon/6/application-development/use-cases/gui/qt-on-torizon-os);
+- [Getting Started with Qt](https://developer.toradex.com/linux-bsp/6/application-development/gui/getting-started-with-qt/);
 - [Qt 6 QML Template](https://github.com/torizon/vscode-torizon-templates/blob/dev/cppQML/.doc/README.md);
 - [Qt PySide2 Tempĺate](https://github.com/torizon/vscode-torizon-templates/tree/bookworm/python3Pyside2QML/.doc).
 

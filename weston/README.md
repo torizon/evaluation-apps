@@ -49,5 +49,5 @@ To run this demo, you need:s
 
 ## More Resources
 
-- [Weston on Torizon OS](https://developer.toradex.com/torizon/application-development/working-with-containers/working-with-weston-on-torizoncore/);
+- [Weston on Torizon OS](https://developer.toradex.com/torizon/6/application-development/provided-containers/working-with-weston-on-torizoncore);
 - [Torizon Containers Github](https://github.com/torizon/torizon-containers/tree/oldstable/debian-docker-images/imx/weston);

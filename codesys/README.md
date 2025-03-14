@@ -43,5 +43,5 @@ To run this demo, you need:
 
 ## More Resources
 
-- [Codesys demo](https://developer.toradex.com/torizon/application-development/partner-containers/partner-demo-container-codesys);
+- [Codesys demo](https://developer.toradex.com/torizon/6/application-development/partner-containers/partner-demo-container-codesys);
 - [How get the Device's Hostname](https://developer.toradex.com/software/development-resources/ssh/#using-the-hostname).

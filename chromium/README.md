@@ -37,5 +37,5 @@ To run this demo, you need:
 
 ## More Resources
 
-- [Web Browser in kiosk mode](https://developer.toradex.com/torizon/application-development/use-cases/gui/web-browser-kiosk-mode-with-torizoncore/);
+- [Web Browser in kiosk mode](https://developer.toradex.com/torizon/6/application-development/use-cases/gui/web-browser-kiosk-mode-with-torizoncore);
 - [Torizon Containers Github](https://github.com/torizon/torizon-containers/tree/oldstable/debian-docker-images/imx/chromium).
