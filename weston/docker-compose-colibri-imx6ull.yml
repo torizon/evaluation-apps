@@ -3,13 +3,17 @@ services:
     cap_add:
     - CAP_SYS_TTY_CONFIG
     command:
-    - --tty=/dev/tty7
-    - --
-    - --use-pixman
+    - '/usr/bin/entry.sh --tty=/dev/tty7 -- --use-pixman& sleep 5 && weston-simple-shm
+      | weston-simple-egl | weston-simple-damage | weston-flower
+
+      '
     device_cgroup_rules:
     - c 4:* rmw
     - c 13:* rmw
     - c 226:* rmw
+    entrypoint:
+    - /bin/sh
+    - -c
     image: torizon/weston@sha256:857f83d0f5b63fe2e7d6e0f07f6264f936c58588b1ab77391b0ed5c5965b2da5
     ipc: host
     network_mode: host
