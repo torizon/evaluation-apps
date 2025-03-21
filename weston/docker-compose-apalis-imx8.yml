@@ -3,7 +3,7 @@ services:
     cap_add:
     - CAP_SYS_TTY_CONFIG
     command:
-    - '/usr/bin/entry.sh --tty=/dev/tty7 & sleep 5 && weston-simple-shm | weston-simple-egl
+    - '/usr/bin/entry.sh --tty=/dev/tty7 --developer & sleep 5 && weston-simple-shm | weston-simple-egl
       | weston-simple-damage | weston-flower
 
       '
