@@ -1,18 +1,16 @@
 # Weston Desktop Environment #
 
-![Torizon Version](https://img.shields.io/badge/Torizon_OS-6.8.1-blue?logo=torizon) 
+![Torizon Version](https://img.shields.io/badge/Torizon_OS-7.1.0-blue?logo=torizon) 
 &nbsp;
-![Torizon Container](https://img.shields.io/badge//torizon/weston-3-blue?logo=docker)
+![Torizon Container](https://img.shields.io/badge//torizon/weston-4.4.0-blue?logo=docker)
 &nbsp;
-![Torizon Container](https://img.shields.io/badge//torizon/weston--vivante-3-blue?logo=docker)
+![Torizon Container](https://img.shields.io/badge//torizon/weston--vivante-4.4.0-blue?logo=docker)
 &nbsp;
-![Torizon Container](https://img.shields.io/badge//torizon/weston--am62-3-blue?logo=docker)
+![Torizon Container](https://img.shields.io/badge//torizon/weston--am62-4.4.0-blue?logo=docker)
 
 This app starts a standalone instance of Weston from where you can launch other applications like the weston-terminal Terminal Emulator.
 
-![Screenshot](https://docs1.toradex.com/116545-demogalleryweston.png?v=1)
-
-A blank dark-blue screen.
+![Screenshot](https://docs1.toradex.com/116545-demogalleryweston.png?v=3)
 
 ## About
 
