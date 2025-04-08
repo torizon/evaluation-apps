@@ -10,6 +10,7 @@ services:
     - c 226:* rmw
     image: allanktoradex/cppqmltemplate-upstream:torizon-7
     platform: linux/arm/v7
+    restart: unless-stopped
     volumes:
     - source: /tmp
       target: /tmp
@@ -32,6 +33,7 @@ services:
     image: torizon/weston:4.4.0
     network_mode: host
     platform: linux/arm/v7
+    restart: unless-stopped
     volumes:
     - source: /tmp
       target: /tmp
