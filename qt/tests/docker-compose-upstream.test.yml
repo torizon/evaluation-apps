@@ -8,7 +8,7 @@ services:
     - c 13:* rmw
     - c 199:* rmw
     - c 226:* rmw
-    image: allanktoradex/cppqmltemplate-upstream:torizon-7
+    image: allanktoradex/cppqmltemplate-upstream@sha256:9f5f2168805905b2d3a2d1b42bbc631ac3cfefb5a67995105e1884ff809e2d14
     platform: linux/arm/v7
     restart: unless-stopped
     volumes:
@@ -22,7 +22,7 @@ services:
     cap_add:
     - CAP_SYS_TTY_CONFIG
     command:
-    - '/usr/bin/entry.sh --tty=/dev/tty7 --developer ${WESTON_DEBUG}'
+    - /usr/bin/entry.sh --tty=/dev/tty7 --developer ${WESTON_DEBUG}
     device_cgroup_rules:
     - c 4:* rmw
     - c 13:* rmw
@@ -30,7 +30,7 @@ services:
     entrypoint:
     - /bin/sh
     - -c
-    image: torizon/weston:4.4.0
+    image: torizon/weston@sha256:2edb0354e0c26db992d095db71ff8b1d4ff3879f1bc0e19d534062f48ce05684
     network_mode: host
     platform: linux/arm/v7
     restart: unless-stopped

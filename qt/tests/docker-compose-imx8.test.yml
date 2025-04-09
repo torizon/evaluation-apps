@@ -8,7 +8,7 @@ services:
     - c 13:* rmw
     - c 199:* rmw
     - c 226:* rmw
-    image: allanktoradex/cppqmltemplate-imx8:torizon-7
+    image: allanktoradex/cppqmltemplate-imx8@sha256:122075a08234ef1347556bfe0572e51f9421fd14c812443270f348ea25a1f22b
     platform: linux/arm64
     restart: unless-stopped
     volumes:
@@ -22,7 +22,7 @@ services:
     cap_add:
     - CAP_SYS_TTY_CONFIG
     command:
-    - '/usr/bin/entry.sh --tty=/dev/tty7 --developer ${WESTON_DEBUG}'
+    - /usr/bin/entry.sh --tty=/dev/tty7 --developer ${WESTON_DEBUG}
     device_cgroup_rules:
     - c 4:* rmw
     - c 13:* rmw
@@ -34,7 +34,7 @@ services:
     - -c
     environment:
     - ACCEPT_FSL_EULA=1
-    image: torizon/weston-imx8:4.4.0
+    image: torizon/weston-imx8@sha256:43062b97a1fcd7db991c0ea1c9f90442fe61c384232e09c61970eb58f69e19e1
     network_mode: host
     platform: linux/arm64
     restart: unless-stopped
