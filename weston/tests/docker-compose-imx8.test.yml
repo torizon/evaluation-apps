@@ -3,15 +3,22 @@ services:
     cap_add:
     - CAP_SYS_TTY_CONFIG
     command:
-    - --tty=/dev/tty7
+    - '/usr/bin/entry.sh --tty=/dev/tty7 --developer ${WESTON_DEBUG} & sleep 5 && weston-simple-shm
+      | weston-simple-egl | weston-simple-damage | weston-flower
+
+      '
     device_cgroup_rules:
     - c 4:* rmw
     - c 13:* rmw
     - c 226:* rmw
     - c 199:* rmw
+    - c 253:* rmw
+    entrypoint:
+    - /bin/sh
+    - -c
     environment:
     - ACCEPT_FSL_EULA=1
-    image: torizon/weston-vivante@sha256:20b09290a5238b2b61d5f6965e2407347867100f488ce77cfd19f485d82501e6
+    image: torizon/weston-imx8@sha256:43062b97a1fcd7db991c0ea1c9f90442fe61c384232e09c61970eb58f69e19e1
     network_mode: host
     platform: linux/arm64
     volumes:
