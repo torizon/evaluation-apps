@@ -1,0 +1,51 @@
+services:
+  app:
+    depends_on:
+    - weston
+    device_cgroup_rules:
+    - c 4:0 rmw
+    - c 4:7 rmw
+    - c 13:* rmw
+    - c 199:* rmw
+    - c 226:* rmw
+    image: allanktoradex/cppqmltemplate-imx8@sha256:122075a08234ef1347556bfe0572e51f9421fd14c812443270f348ea25a1f22b
+    platform: linux/arm64
+    restart: unless-stopped
+    volumes:
+    - source: /tmp
+      target: /tmp
+      type: bind
+    - source: /dev
+      target: /dev
+      type: bind
+  weston:
+    cap_add:
+    - CAP_SYS_TTY_CONFIG
+    command:
+    - /usr/bin/entry.sh --tty=/dev/tty7 --developer
+    device_cgroup_rules:
+    - c 4:* rmw
+    - c 13:* rmw
+    - c 226:* rmw
+    - c 199:* rmw
+    - c 253:* rmw
+    entrypoint:
+    - /bin/sh
+    - -c
+    environment:
+    - ACCEPT_FSL_EULA=1
+    image: torizon/weston-imx8@sha256:43062b97a1fcd7db991c0ea1c9f90442fe61c384232e09c61970eb58f69e19e1
+    network_mode: host
+    platform: linux/arm64
+    restart: unless-stopped
+    volumes:
+    - source: /tmp
+      target: /tmp
+      type: bind
+    - source: /dev
+      target: /dev
+      type: bind
+    - source: /run/udev
+      target: /run/udev
+      type: bind
+version: '3.9'
