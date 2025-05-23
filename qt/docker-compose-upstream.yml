@@ -8,8 +8,9 @@ services:
     - c 13:* rmw
     - c 199:* rmw
     - c 226:* rmw
-    image: lucastor/cppqml-template-vivante@sha256:963f25920c1f13892ecb4f345356d9e8992d245a3d2e121d94131d44f5f98ae7
-    platform: linux/arm64
+    image: allanktoradex/cppqmltemplate-upstream@sha256:9f5f2168805905b2d3a2d1b42bbc631ac3cfefb5a67995105e1884ff809e2d14
+    platform: linux/arm/v7
+    restart: unless-stopped
     volumes:
     - source: /tmp
       target: /tmp
@@ -21,17 +22,18 @@ services:
     cap_add:
     - CAP_SYS_TTY_CONFIG
     command:
-    - --tty=/dev/tty7
+    - /usr/bin/entry.sh --tty=/dev/tty7 --developer
     device_cgroup_rules:
     - c 4:* rmw
     - c 13:* rmw
     - c 226:* rmw
-    - c 199:* rmw
-    environment:
-    - ACCEPT_FSL_EULA=1
-    image: torizon/weston-vivante@sha256:20b09290a5238b2b61d5f6965e2407347867100f488ce77cfd19f485d82501e6
+    entrypoint:
+    - /bin/sh
+    - -c
+    image: torizon/weston@sha256:2edb0354e0c26db992d095db71ff8b1d4ff3879f1bc0e19d534062f48ce05684
     network_mode: host
-    platform: linux/arm64
+    platform: linux/arm/v7
+    restart: unless-stopped
     volumes:
     - source: /tmp
       target: /tmp

@@ -1,16 +1,16 @@
 # Qt #
 
-![Torizon Version](https://img.shields.io/badge/Torizon_OS-6.8.1-blue?logo=torizon)
+![Torizon Version](https://img.shields.io/badge/Torizon_OS-7.1.0-blue?logo=torizon)
 &nbsp;
-![Torizon Container](https://img.shields.io/badge//lucastor/cppqml--template-3.2.0-blue?logo=docker)
+![Torizon Container](https://img.shields.io/badge//allanktoradex/cppqmltemplate--upstream-torizon--7-blue?logo=docker)
 &nbsp;
-![Torizon Container](https://img.shields.io/badge//lucastor/cppqml--template--vivante-3.2.0-blue?logo=docker)
+![Torizon Container](https://img.shields.io/badge//allanktoradex/cppqmltemplate--imx8-torizon--7-blue?logo=docker)
 &nbsp;
-![Torizon Container](https://img.shields.io/badge//lucastor/cppqml--template--am62-3.2.0-blue?logo=docker)
+![Torizon Container](https://img.shields.io/badge//allanktoradex/cppqmltemplate--am62-torizon--7-blue?logo=docker)
 
-Deploy a simple Qt QML application (in C++) in a Weston environment. It creates a window and displays the Torizon icon using the Weston container as the Wayland compositor.
+Deploy a simple Qt QML application (in C++) in a Weston environment. It creates a window and displays an animation with the Torizon icon using the Weston container as the Wayland compositor.
 
-![Screenshot](https://docs1.toradex.com/116544-demogalleryqt.png?v=1)
+![Screenshot](https://docs1.toradex.com/116544-demogalleryqt.png?v=2)
 
 ## About
 
@@ -33,9 +33,7 @@ To run this demo, you need:s
 
 ## More Resources
 
-- [Qt on Torizon OS](https://developer.toradex.com/torizon/6/application-development/use-cases/gui/qt-on-torizon-os);
-- [Getting Started with Qt](https://developer.toradex.com/linux-bsp/6/application-development/gui/getting-started-with-qt/);
+- [Qt on Torizon OS](https://developer.toradex.com/torizon/application-development/use-cases/gui/qt-on-torizon-os);
+- [Getting Started with Qt](https://developer.toradex.com/linux-bsp/application-development/gui/getting-started-with-qt/);
 - [Qt 6 QML Template](https://github.com/torizon/vscode-torizon-templates/blob/dev/cppQML/.doc/README.md);
 - [Qt PySide2 Tempĺate](https://github.com/torizon/vscode-torizon-templates/tree/bookworm/python3Pyside2QML/.doc).
-
-
